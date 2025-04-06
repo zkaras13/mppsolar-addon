@@ -1,0 +1,24 @@
+{
+  "domain": "mppsolar",
+  "name": "MPP Solar to MQTT",
+  "version": "1.0.0",
+  "slug": "mppsolar",
+  "description": "A Home Assistant add-on to bridge MPP Solar inverters to MQTT.",
+  "arch": ["armv7", "aarch64", "amd64"],
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "devices": ["/dev/ttyUSB0"],
+  "options": {
+    "mqtt_host": "127.0.0.1",
+    "mqtt_port": 1883,
+    "mqtt_user": "",
+    "mqtt_password": ""
+  },
+  "schema": {
+    "mqtt_host": "str",
+    "mqtt_port": "int",
+    "mqtt_user": "str",
+    "mqtt_password": "str"
+  }
+}
