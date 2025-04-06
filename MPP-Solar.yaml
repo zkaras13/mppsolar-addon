@@ -1,0 +1,21 @@
+name: "MPP Solar MQTT"
+version: "1.0.0"
+slug: "mppsolar"
+description: "MPP Solar to MQTT bridge"
+startup: services
+boot: auto
+host_network: true
+privileged:
+  - SYS_ADMIN
+devices:
+  - /dev/ttyUSB0
+options:
+  mqtt_host: 127.0.0.1
+  mqtt_port: 1883
+  mqtt_user: ""
+  mqtt_password: ""
+schema:
+  mqtt_host: str
+  mqtt_port: int
+  mqtt_user: str
+  mqtt_password: str
